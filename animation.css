@@ -1,0 +1,162 @@
+:root {
+    --publicWidth: 100%;
+    --sandyHeight: 18%;
+    --oceanHeight: 24%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    animation-name: sunnyoff;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-play-state: paused;
+}
+
+.sky {
+    height: 20em;
+    background-color: #03AED2;
+}
+
+
+
+.ocean {
+    height: 11em;
+    background-color: #68D2E8;
+    z-index: 3;
+}
+
+.sand {
+    height: 6em;
+    background-color: #FDDE55;
+    z-index: 2;
+}
+
+.sandy {
+    height: 8em;
+    background-color: #FEEFAD;
+    z-index: 1;
+}
+
+#ship {
+    height: auto;
+    width: 5%;
+    float: left;
+    margin-left: -6%;
+    margin-top: -4%;
+    animation-name: shipMoving;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes shipMoving {
+    from {
+        transform: translateX(2100%);
+    }
+}
+
+@keyframes sunnyoff {
+
+    50% {
+        opacity: 0;
+    }
+
+}
+
+#sun {
+    height: 55%;
+    width: 15%;
+    float: right;
+}
+
+#cld1 {
+    height: 55%;
+    width: 17%;
+    float: left;
+    margin-left: 20%;
+    margin-top: -5%;
+}
+
+#cld2 {
+    height: 55%;
+    width: 17%;
+    float: left;
+    margin-left: 15%;
+    margin-top: 2%;
+}
+
+#crab {
+    height: auto;
+    width: 8%;
+    float: left;
+    margin-left: -6%;
+    margin-top: 3%;
+    animation-name: crabMoving;
+    animation-duration: 10s;
+    animation-timing-function: steps(20);
+
+}
+
+@keyframes crabMoving {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(700%);
+    }
+
+    80% {
+        transform: translateX(700%)
+    }
+
+    95% {
+        transform: rotateX(360deg);
+    }
+
+
+}
+
+.text {
+    background-color: #FFFFFF;
+    font-size: 24px;
+    width: 15%;
+    margin-left: 55%;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 10%;
+    padding: 2% 0 2% 0;
+    border-radius: 10px;
+    opacity: 0;
+    animation-name: nhincuccut;
+    animation-duration: 8s;
+
+
+}
+
+@keyframes nhincuccut {
+    10% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
